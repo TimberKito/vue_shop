@@ -26,14 +26,14 @@
         <el-form-item prop="username">
           <el-input
             v-model="loginForm.username"
-            prefix-icon="el-icon-user-solid"
+            prefix-icon="iconfont icon-user"
           ></el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item prop="password">
           <el-input
             v-model="loginForm.password"
-            prefix-icon="el-icon-lock"
+            prefix-icon="iconfont icon-3702mima"
             type="password"
           ></el-input>
         </el-form-item>
@@ -61,15 +61,15 @@ export default {
         // 验证用户名是否合法
         username: [
           { required: true, message: '请输入登录名称', trigger: 'blur' },
-          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' },
+          { min: 3, max: 15, message: '长度在 3 到 5 个字符', trigger: 'blur' },
         ],
         // 验证密码是否合法
         password: [
           { required: true, message: '请输入登录密码', trigger: 'blur' },
           {
-            min: 6,
+            min: 5,
             max: 15,
-            message: '长度在 6 到 15 个字符',
+            message: '长度在 5 到 15 个字符',
             trigger: 'blur',
           },
         ],
